@@ -1,29 +1,29 @@
 let image = document.getElementById('image');
 
-let b = 1;
+let currentIndex = 1;
 
 function nextFoto() {
-    if (b === 5) {
-        b = 1;
+    if (currentIndex === 5) {
+        currentIndex = 1;
     } else {
-        b += 1;
+        currentIndex += 1;
     }
-    image.src = `./assets/images/${b}.png`;
-    return b;
+    image.src = `./assets/images/${currentIndex}.png`;
+    return currentIndex;
 }
 
 function previousFoto() {
-    if (b === 1) {
-        b = 5;
+    if (currentIndex === 1) {
+        currentIndex = 5;
     } else {
-        b -= 1;
+        currentIndex -= 1;
     }
-    image.src = `./assets/images/${b}.png`;
-    return b;
+    image.src = `./assets/images/${currentIndex}.png`;
+    return currentIndex;
 };
 
-/* Примечание для меня: return b не перезаписывает переменную b, но новое значение переменной b сохраняется между вызовами функции
-Проверить можно с помощью console.log(nextFoto()), которая выведет текущее значение b после увеличения */
+/* Примечание для меня: return currentIndex не перезаписывает переменную currentIndex, но новое значение переменной currentIndex сохраняется между вызовами функции
+Проверить можно с помощью console.log(nextFoto()), которая выведет текущее значение currentIndex после увеличения */
 
 
 
